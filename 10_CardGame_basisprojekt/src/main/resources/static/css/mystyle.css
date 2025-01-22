@@ -1,5 +1,192 @@
-body{
-    background-image: url("../images/Fortnite-OG.png");
+/* mystyle.css */
+
+/* Grundlegende Reset-Stile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Körper-Stile */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('images/Fortnite-OG.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
     height: 100vh;
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container für das Spiel */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+/* Überschrift */
+h1 {
+    font-size: 3rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Die Container für Spieler */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.col-4 {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h5 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 2px solid #ffcc00;
+    background-color: transparent;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    color: #fff;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Tabellen-Stile */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+td {
+    text-align: left;
+    color: #ccc;
+}
+
+/* Karten-Stile */
+img {
+    max-width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Leere Kartenanzeige */
+.border {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #444;
+    color: #999;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Animationen für die Karten */
+@keyframes showCardAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animationen nur für die linke Karte bei "show left" */
+.col-4.first-child.showLeft {
+    animation: showCardAnimation 0.6s ease-out;
+}
+
+/* Animationen nur für die rechte Karte bei "show right" */
+.col-4.last-child.showRight {
+    animation: showCardAnimation 0.6s ease-out;
+}
+
+/* Karten und Container nur für Spieler 2 bleiben normal */
+.col-4:last-child {
+    position: relative;
+}
+
+.col-4:last-child img {
+    animation: none;
+}
+
+/* Responsives Design */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
 }
