@@ -29,18 +29,14 @@ public class ViewController {
         leftCarList.clear();
         rightCarList.clear();
 
-        //Aufwendiger Style
-        Car car1 = new Car("images/Auto.png", "Audi", "Flaschback 300", 50000.00 );
-        leftCarList.add(car1);
-        Car car2 = new Car("images/Auto.png", "Opel", "Manta SE", 20000.00 );
-        leftCarList.add(car2);
-        Car car3 = new Car("images/Auto.png", "VW", "Golf GL", 12000.00 );
-        leftCarList.add(car3);
+        leftCarList.add(new Car("images/bolt-action sniper rifle blue .jpg", "Bolt-Action Sniper Rifle", "Scharfschützengewehr", 31.5, 105, 1, 0.3, 3, 105 ));
+        leftCarList.add(new Car("images/FAMAS (Burst Assault Rifle) gray.jpeg", "Burst Assault Rifle", "Sturmgewehr", 109.5, 27, 30, 4.06, 2.75, 27 ));
+        leftCarList.add(new Car("images/pump shotgun lila.jpg", "Shrotflinte", "", 83.3, 119, 5, 0.7, 4.2, 10 ));
 
         //Objekt direkt erstellen
-        rightCarList.add(new Car("images/Auto.png", "Fiat", "500", 15000.00 ));
-        rightCarList.add(new Car("images/Auto.png", "Alfa Romeo", "Guilietta", 30000.00 ));
-        rightCarList.add(new Car("images/Auto.png", "Lancia", "Delta", 45000.00 ));
+        rightCarList.add(new Car("images/rocket launcher gold .jpg", "Rocket Launcher ", "Racketenwerfer", 97.5, 130, 1, 0.75, 2.52, 330 ));
+        rightCarList.add(new Car("images/scar assault rifle gold .jpg", "Scar", "Sturmgewehr", 198, 36, 30, 5.5, 2.2, 36 ));
+        rightCarList.add(new Car("images/TAC SMG.png", "Taktische Maschienenpistole", "Maschienenpistole", 170, 17, 30, 10, 2.3, 17));
     }
 
     @GetMapping("/")
