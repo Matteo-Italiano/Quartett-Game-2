@@ -1,22 +1,26 @@
 package ch.bbw.cardgame;
 
-/**
- * Car
- *    Fachklasse für ein Auto
- * @author Peter Rutschmann
- * @date 26.08.2021
- */
 public class Car {
     private String imageUrl;
     private String tradeName;
     private String model;
-    private double prize;
+    private double dps;
+    private double damage;
+    private int magazineSize;
+    private double fireRate;
+    private double relodeTime;
+    private double structureDamage;
 
-    public Car(String imageUrl, String tradeName, String model, double prize) {
+
+    public Car(String imageUrl, String tradeName, String model, double dps, double damage, double magazineSize, double fireRate, double relodeTime, double structureDamage) {
         this.imageUrl = imageUrl;
         this.tradeName = tradeName;
         this.model = model;
-        this.prize = prize;
+        this.dps = dps;
+        this.damage = damage;
+        this.fireRate = fireRate;
+        this.relodeTime = relodeTime;
+        this.structureDamage = structureDamage;
     }
 
     public String getImageUrl() {
@@ -43,11 +47,53 @@ public class Car {
         this.model = model;
     }
 
-    public double getPrize() {
-        return prize;
+    public double getDps() {
+        return dps;
     }
 
-    public void setPrize(double prize) {
-        this.prize = prize;
+    public void setDps(double dps) {
+        this.dps = dps;
     }
+
+    public double getDamage() {
+        return damage;
+    }
+
+    public void setDamage(double damage) {
+        this.damage = damage;
+    }
+
+    public int getMagazineSize() {
+        return magazineSize;
+    }
+
+    public void setMagazineSize(int magazineSize) {
+        this.magazineSize = magazineSize;
+    }
+
+    public double getFireRate() {
+        return fireRate;
+    }
+
+    public void setFireRate(double fireRate) {
+        this.fireRate = fireRate;
+    }
+
+    public double getRelodeTime() {
+        return relodeTime;
+    }
+
+    public void setRelodeTime(double relodeTime) {
+        this.relodeTime = relodeTime;
+    }
+
+    public double getStructureDamage() {
+        return structureDamage;
+    }
+
+    public void setStructureDamage(double structureDamage) {
+        this.structureDamage = structureDamage;
+    }
+
+
 }
