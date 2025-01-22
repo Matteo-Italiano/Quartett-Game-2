@@ -12,14 +12,12 @@
     <title>Card Game</title>
 </head>
 <body>
+<div>
+
+</div>
     <form action="#" th:action="@{/cardGameView}" th:object="${cardGameModel}" method="post">
         <div class="container">
-            <h1>Card Game</h1>
-            <p>Spieler 1 und Spieler 2 haben je ein verdecktes Deck von Karten.</p>
-            <p>Spieler 1 deckt eine Karte auf und entscheidet sich für ein Attribut, das er setzt.</p>
-            <p>Spieler 2 deckt eine Karte auf und die Karte mit dem besseren Wert im Attribut gewinnt.</p>
-            <p>Die Verlierer Karte wird in das Deck des Siegers verschoben.</p>
-            <p>Und der Sieger zeigt seine nächste Karte...</p>
+            <h1>Fortnie-Quartett</h1>
             <div class="row justify-content-evenly">
                 <div class="col-4">
                     <h5>Spieler 1</h5>
@@ -31,18 +29,18 @@
                         <img class="img-fluid" th:src="${leftCar.imageUrl}" alt="Autobild">
                         <table class="table">
                             <tbody>
-                                <tr>
-                                    <th scope="row">Marke</th>
-                                    <td th:text="${leftCar.tradeName}"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Model</th>
-                                    <td th:text="${leftCar.model}"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Preis</th>
-                                    <td th:text="${leftCar.prize}"></td>
-                                </tr>
+                            <tr>
+                                <th scope="row">Marke</th>
+                                <td th:text="${leftCar.tradeName}"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Model</th>
+                                <td th:text="${leftCar.model}"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Preis</th>
+                                <td th:text="${leftCar.prize}"></td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -71,7 +69,7 @@
                                 <th scope="row">Preis</th>
                                 <td th:text="${rightCar.prize}"></td>
                             </tr>
-                           
+
                             </tbody>
                         </table>
                     </div>

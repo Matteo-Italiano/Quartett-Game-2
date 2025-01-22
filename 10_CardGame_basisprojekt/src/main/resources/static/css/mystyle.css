@@ -1,3 +1,5 @@
-h1 {
-    color:green;
+body{
+    background-image: url("../images/Fortnite-OG.png");
+    height: 100vh;
+    width: 100vw;
 }
