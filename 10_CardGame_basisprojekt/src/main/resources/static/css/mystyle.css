@@ -13,8 +13,10 @@ body {
 }
 
 .player{
-    max-width: 425px;
+    max-width: 410px;
+    max-height: 725px;
     margin: 20px;
+    border-radius: 10px;
 
 }
 
@@ -127,7 +129,21 @@ img:hover {
 
 #soundBtn{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 5px;
+    bottom: 5px;
     width: 75px;
+}
+
+.btn{
+    width: 90% !important;
+    align-self: center;
+    justify-self: center;
+}
+
+.mt-1{
+    width: 300px !important;
+}
+
+.mega{
+
 }

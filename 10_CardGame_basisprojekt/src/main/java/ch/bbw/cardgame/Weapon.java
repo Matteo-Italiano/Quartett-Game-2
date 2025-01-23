@@ -1,6 +1,6 @@
 package ch.bbw.cardgame;
 
-public class Car {
+public class Weapon {
     private String imageUrl;
     private String tradeName;
     private String model;
@@ -12,7 +12,7 @@ public class Car {
     private double structureDamage;
 
 
-    public Car(String imageUrl, String tradeName, String model, double dps, double damage, double magazineSize, double fireRate, double relodeTime, double structureDamage) {
+    public Weapon(String imageUrl, String tradeName, String model, double dps, double damage, double magazineSize, double fireRate, double relodeTime, double structureDamage) {
         this.imageUrl = imageUrl;
         this.tradeName = tradeName;
         this.model = model;
