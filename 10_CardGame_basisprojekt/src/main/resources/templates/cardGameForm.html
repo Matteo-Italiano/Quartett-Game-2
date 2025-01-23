@@ -20,7 +20,7 @@
     <form class="forms"  action="#" th:action="@{/cardGameView}" th:object="${cardGameModel}" method="post">
         <div class="container">
             <div class="player">
-                <h5>Spieler 1</h5>
+                <h5 contenteditable="true">Spieler 1</h5>
                 <label th:text="'Noch ' + ${numberLeft}  + ' Karten im Deck'"></label>
                 <div class="mt-1 p-2 border" th:if="${leftCar == null}">Leere Karte
                     <img class="img-fluid" src="images/img.png" alt="Autobild">
@@ -69,7 +69,7 @@
             </div>
             
             <div class="player">
-                <h5>Spieler 2</h5>
+                <h5 contenteditable="true">Spieler 2</h5>
                 <label th:text="'Noch ' + ${numberRight}  + ' Karten im Deck'"></label>
                 <div class="mt-1 p-2 border" th:if="${rightCar == null}">Leere Karte
                     <img class="img-fluid" src="images/img.png" alt="Autobild">
@@ -112,7 +112,7 @@
                 <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="showRight">show right</button>
                 <button type="submit" class="btn btn-outline-primary m-1" name="moveButton" value="moveToLeft">move to left</button>
             </div>
-            <audio id="audio" src="images/Fortnite OG (Classic) Lobby Music (C1S10 Battle Pass).mp3"  loop>
+            <audio id="audio" src="images/Fortnite OG (Classic) Lobby Music (C1S10 Battle Pass).mp3"  autoplay="true" loop>
             </audio>
         </div>
     </form>
