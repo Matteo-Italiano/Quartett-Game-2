@@ -14,102 +14,108 @@
 <body>
 <div>
 </div>
-    <form action="#" th:action="@{/cardGameView}" th:object="${cardGameModel}" method="post">
-            <div class="container">
-                <div class="player">
-                    <h5>Spieler 1</h5>
-                    <label th:text="'Noch ' + ${numberLeft}  + ' Karten im Deck'"></label>
-                    <div class="mt-1 p-2 border" th:if="${leftCar == null}">Leere Karte
-                        <img class="img-fluid" src="images/img.png" alt="Autobild">
-                    </div>
-                    <div class="mt-1 p-2 border" th:if="${leftCar != null}">
-                        <img class="img-fluid" th:src="${leftCar.imageUrl}" alt="Autobild">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th scope="row">Name</th>
-                                <td th:text="${leftCar.tradeName}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Model</th>
-                                <td th:text="${leftCar.model}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">DPS</th>
-                                <td th:text="${leftCar.dps}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Damage</th>
-                                <td th:text="${leftCar.damage}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Fire Rate</th>
-                                <td th:text="${leftCar.fireRate}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Relode Time</th>
-                                <td th:text="${leftCar.relodeTime}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Structure Damage</th>
-                                <td th:text="${leftCar.structureDamage}"></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="showLeft">show left</button>
-                    <button type="submit" class="btn btn-outline-primary m-1" name="moveButton" value="moveToRight">move to right</button>
-                </div>
 
-                <div class="player">
-                    <h5>Spieler 2</h5>
-                    <label th:text="'Noch ' + ${numberRight}  + ' Karten im Deck'"></label>
-                    <div class="mt-1 p-2 border" th:if="${rightCar == null}">Leere Karte
-                        <img class="img-fluid" src="images/img.png" alt="Autobild">
-                    </div>
-                    <div class="mt-1 p-2 border" th:if="${rightCar != null}">
-                        <img class="img-fluid" th:src="${rightCar.imageUrl}" alt="Autobild">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th scope="row">Name</th>
-                                <td th:text="${rightCar.tradeName}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Model</th>
-                                <td th:text="${rightCar.model}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">DPS</th>
-                                <td th:text="${rightCar.dps}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Damage</th>
-                                <td th:text="${rightCar.damage}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Fire Rate</th>
-                                <td th:text="${rightCar.fireRate}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Relode Time</th>
-                                <td th:text="${rightCar.relodeTime}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Structure Damage</th>
-                                <td th:text="${rightCar.structureDamage}"></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="showRight">show right</button>
-                    <button type="submit" class="btn btn-outline-primary m-1" name="moveButton" value="moveToLeft">move to left</button>
+<div class="main-content">
+    <form class="forms"  action="#" th:action="@{/cardGameView}" th:object="${cardGameModel}" method="post">
+        <div class="container">
+            <div class="player">
+                <h5>Spieler 1</h5>
+                <label th:text="'Noch ' + ${numberLeft}  + ' Karten im Deck'"></label>
+                <div class="mt-1 p-2 border" th:if="${leftCar == null}">Leere Karte
+                    <img class="img-fluid" src="images/img.png" alt="Autobild">
                 </div>
+                <div class="mt-1 p-2 border" th:if="${leftCar != null}">
+                    <img class="img-fluid" th:src="${leftCar.imageUrl}" alt="Autobild">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td th:text="${leftCar.tradeName}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Model</th>
+                            <td th:text="${leftCar.model}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DPS</th>
+                            <td th:text="${leftCar.dps}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Damage</th>
+                            <td th:text="${leftCar.damage}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Fire Rate</th>
+                            <td th:text="${leftCar.fireRate}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Relode Time</th>
+                            <td th:text="${leftCar.relodeTime}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Structure Damage</th>
+                            <td th:text="${leftCar.structureDamage}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="showLeft">show left</button>
+                <button type="submit" class="btn btn-outline-primary m-1" name="moveButton" value="moveToRight">move to right</button>
             </div>
+
+
             <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="reset">Reset</button>
+
+            <div class="player">
+                <h5>Spieler 2</h5>
+                <label th:text="'Noch ' + ${numberRight}  + ' Karten im Deck'"></label>
+                <div class="mt-1 p-2 border" th:if="${rightCar == null}">Leere Karte
+                    <img class="img-fluid" src="images/img.png" alt="Autobild">
+                </div>
+                <div class="mt-1 p-2 border" th:if="${rightCar != null}">
+                    <img class="img-fluid" th:src="${rightCar.imageUrl}" alt="Autobild">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td th:text="${rightCar.tradeName}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Model</th>
+                            <td th:text="${rightCar.model}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DPS</th>
+                            <td th:text="${rightCar.dps}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Damage</th>
+                            <td th:text="${rightCar.damage}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Fire Rate</th>
+                            <td th:text="${rightCar.fireRate}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Relode Time</th>
+                            <td th:text="${rightCar.relodeTime}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Structure Damage</th>
+                            <td th:text="${rightCar.structureDamage}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="showRight">show right</button>
+                <button type="submit" class="btn btn-outline-primary m-1" name="moveButton" value="moveToLeft">move to left</button>
+            </div>
+        </div>
     </form>
 
-<audio id="audio" src="images/Fortnite OG (Classic) Lobby Music (C1S10 Battle Pass).mp3" controls autoplay loop>
-</audio>
+    <audio id="audio" src="images/Fortnite OG (Classic) Lobby Music (C1S10 Battle Pass).mp3" controls loop>
+    </audio>
+</div>
+
 </body>
 </html>
