@@ -15,10 +15,8 @@
 <div>
 </div>
     <form action="#" th:action="@{/cardGameView}" th:object="${cardGameModel}" method="post">
-
-            <h1>Fortnie-Quartett</h1>
-            <div class="row justify-content-evenly">
-                <div class="col-4">
+            <div class="container">
+                <div class="player">
                     <h5>Spieler 1</h5>
                     <label th:text="'Noch ' + ${numberLeft}  + ' Karten im Deck'"></label>
                     <div class="mt-1 p-2 border" th:if="${leftCar == null}">Leere Karte
@@ -62,7 +60,8 @@
                     <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="showLeft">show left</button>
                     <button type="submit" class="btn btn-outline-primary m-1" name="moveButton" value="moveToRight">move to right</button>
                 </div>
-                <div class="col-4">
+
+                <div class="player">
                     <h5>Spieler 2</h5>
                     <label th:text="'Noch ' + ${numberRight}  + ' Karten im Deck'"></label>
                     <div class="mt-1 p-2 border" th:if="${rightCar == null}">Leere Karte
@@ -109,5 +108,8 @@
             </div>
             <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="reset">Reset</button>
     </form>
+
+<audio id="audio" src="images/Fortnite OG (Classic) Lobby Music (C1S10 Battle Pass).mp3" controls autoplay loop>
+</audio>
 </body>
 </html>
