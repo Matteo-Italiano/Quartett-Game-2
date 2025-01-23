@@ -31,7 +31,7 @@ public class ViewController {
 
         leftCarList.add(new Car("images/bolt-action sniper rifle blue .jpg", "Bolt-Action Sniper Rifle", "Scharfschützengewehr", 31.5, 105, 1, 0.3, 3, 105 ));
         leftCarList.add(new Car("images/FAMAS (Burst Assault Rifle) gray.jpeg", "Burst Assault Rifle", "Sturmgewehr", 109.5, 27, 30, 4.06, 2.75, 27 ));
-        leftCarList.add(new Car("images/pump shotgun lila.jpg", "Shrotflinte", "", 83.3, 119, 5, 0.7, 4.2, 10 ));
+        leftCarList.add(new Car("images/pump shotgun lila.jpg", "Pumpgun", "Shrotfline", 83.3, 119, 5, 0.7, 4.2, 10 ));
 
         //Objekt direkt erstellen
         rightCarList.add(new Car("images/rocket launcher gold .jpg", "Rocket Launcher ", "Racketenwerfer", 97.5, 130, 1, 0.75, 2.52, 330 ));

@@ -16,6 +16,7 @@
 </div>
 
 <div class="main-content">
+    <img src="images/2058599.png" id="soundBtn">
     <form class="forms"  action="#" th:action="@{/cardGameView}" th:object="${cardGameModel}" method="post">
         <div class="container">
             <div class="player">
@@ -63,9 +64,10 @@
                 <button type="submit" class="btn btn-outline-primary m-1" name="moveButton" value="moveToRight">move to right</button>
             </div>
 
-
-            <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="reset">Reset</button>
-
+            <div class="container">
+                <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="reset">Reset</button>
+            </div>
+            
             <div class="player">
                 <h5>Spieler 2</h5>
                 <label th:text="'Noch ' + ${numberRight}  + ' Karten im Deck'"></label>
@@ -110,11 +112,11 @@
                 <button type="submit" class="btn btn-outline-primary m-1" name="showButton" value="showRight">show right</button>
                 <button type="submit" class="btn btn-outline-primary m-1" name="moveButton" value="moveToLeft">move to left</button>
             </div>
+            <audio id="audio" src="images/Fortnite OG (Classic) Lobby Music (C1S10 Battle Pass).mp3"  loop>
+            </audio>
         </div>
     </form>
 
-    <audio id="audio" src="images/Fortnite OG (Classic) Lobby Music (C1S10 Battle Pass).mp3" controls loop>
-    </audio>
 </div>
 
 </body>
