@@ -67,6 +67,9 @@ public class ViewController {
         model.addAttribute("rightWeapon", rightWeapon);
         model.addAttribute("numberLeft", leftWeaponList.size());
         model.addAttribute("numberRight", rightWeaponList.size());
+
+        String winnerMessage = Checkwinner();
+        model.addAttribute("winnerMessage", winnerMessage);
         return "cardGameForm";
     }
 
@@ -86,6 +89,9 @@ public class ViewController {
         model.addAttribute("rightWeapon", rightWeapon);
         model.addAttribute("numberLeft", leftWeaponList.size());
         model.addAttribute("numberRight", rightWeaponList.size());
+
+        String winnerMessage = Checkwinner();
+        model.addAttribute("winnerMessage", winnerMessage);
         return "cardGameForm";
     }
 
@@ -100,6 +106,9 @@ public class ViewController {
         model.addAttribute("rightWeapon", rightWeapon);
         model.addAttribute("numberLeft", leftWeaponList.size());
         model.addAttribute("numberRight", rightWeaponList.size());
+
+        String winnerMessage = Checkwinner();
+        model.addAttribute("winnerMessage", winnerMessage);
         return "cardGameForm";
     }
 
@@ -119,6 +128,9 @@ public class ViewController {
         model.addAttribute("rightWeapon", rightWeapon);
         model.addAttribute("numberLeft", leftWeaponList.size());
         model.addAttribute("numberRight", rightWeaponList.size());
+
+        String winnerMessage = Checkwinner();
+        model.addAttribute("winnerMessage", winnerMessage);
         return "cardGameForm";
     }
 
@@ -127,11 +139,24 @@ public class ViewController {
         setup();
         leftWeapon = null;
         rightWeapon = null;
+
+        model.addAttribute("winnerMessage", null);
         model.addAttribute("leftWeapon", leftWeapon);
         model.addAttribute("rightWeapon", rightWeapon);
         model.addAttribute("numberLeft", leftWeaponList.size());
         model.addAttribute("numberRight", rightWeaponList.size());
         return "cardGameForm";
     }
+
+    public String Checkwinner() {
+         if (leftWeaponList.isEmpty()) {
+            return "Player 2 gewinnt!";
+        } else if (rightWeaponList.isEmpty()) {
+            return "Player 1 gewinnt!";
+        } else {
+            return "";
+        }
+    }
+
 
 }

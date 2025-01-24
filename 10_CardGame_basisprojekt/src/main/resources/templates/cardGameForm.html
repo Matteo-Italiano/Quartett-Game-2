@@ -21,16 +21,16 @@
     <form class="forms"  action="#" th:action="@{/cardGameView}" th:object="${cardGameModel}" method="post">
         <div class="container">
 
-            <div class="mega">
+
+
                 <div class="player">
-                    <h5 contenteditable="true">Spieler 1</h5>
+                    <h5 contenteditable="true">Player 1</h5>
                     <label th:text="'Noch ' + ${numberLeft}  + ' Karten im Deck'"></label>
-                    <div class="mt-1 p-2 border" th:if="${leftWeapon == null}">Leere Karte
+                    <div class="mt-1 p-2 border" th:if="${leftWeapon == null}">Empty Card
                         <img class="img-fluid" src="images/img.png" alt="Autobild">
                     </div>
                     <div class="mt-1 p-2 border" th:if="${leftWeapon != null}">
                         <img class="img-fluid" th:src="${leftWeapon.imageUrl}" alt="Autobild">
-
                         <table class="table">
                             <tbody>
                             <tr>
@@ -72,18 +72,21 @@
 
                 </div>
 
-            </div>
+
 
             <div class="container">
                 <div class="reset-wrapper">
+                    <div class="container text-center">
+                        <h4 th:if="${winnerMessage != null}" th:text="${winnerMessage}" class="alert alert-success"></h4>
+                    </div>
                 <button type="submit" class="reset btn btn-outline-primary m-1 small" name="showButton" value="reset">Reset</button>
                     </div>
             </div>
 
             <div class="player">
-                <h5 contenteditable="true">Spieler 2</h5>
-                <label th:text="'Noch ' + ${numberRight}  + ' Karten im Deck'"></label>
-                <div class="mt-1 p-2 border" th:if="${rightWeapon == null}">Leere Karte
+                <h5 contenteditable="true">Player 2</h5>
+                <label th:text="'Still ' + ${numberRight}  + ' Cards in the Hand'"></label>
+                <div class="mt-1 p-2 border" th:if="${rightWeapon == null}">Empty Card
                     <img class="img-fluid" src="images/img.png" alt="Autobild">
                 </div>
                 <div class="mt-1 p-2 border" th:if="${rightWeapon != null}">
