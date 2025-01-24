@@ -15,7 +15,7 @@ body {
 .player{
     max-width: 410px;
     max-height: 725px;
-    margin: 20px;
+    margin: 30px;
     border-radius: 10px;
 
 }
@@ -135,6 +135,9 @@ img:hover {
 }
 
 .btn{
+
+    background-color: #1469C8;
+    color: white;
     width: 90% !important;
     align-self: center;
     justify-self: center;
@@ -142,8 +145,27 @@ img:hover {
 
 .mt-1{
     width: 300px !important;
+    bottom: 10px !important;
 }
 
 .mega{
 
+}
+
+.reset{
+    background-color: #1469C8;
+    color: white;
+    width: 20% !important;
+    align-self: center;
+    justify-self: center;
+}
+
+.reset-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-align: center;
+    width: 100%;
 }
